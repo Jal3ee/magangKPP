@@ -1,0 +1,62 @@
+﻿@{ 
+    ViewBag.Title = "Dashboard Awal";
+    Layout = "~/Views/Shared/_Layout.cshtml"; 
+}
+
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm">
+                        <li class="breadcrumb-item">
+                            <a href="@ViewBag.pathParent/Dashboard/Dashboard">
+                                <i class="fas fa-home"></i>
+                                Home
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="col-12">
+                        <!-- Default box -->
+                        <div class="card">
+                            <div class="text-center">
+                                <!-- Menambahkan kelas "text-center" pada div ini -->
+                                <h1 style="text-align: center;">
+                                    Welcome to POINS!<br />
+                                    <small>Port Operation Integrated System</small>
+                                </h1>
+                                <br />
+                                <div>
+                                    <a href="@ViewBag.pathParent/Dashboard/Index" class="btn btn-light btn-lg btn-outline-primary shadow d-inline-flex align-items-center btn-custom" role="button" style="display: inline-flex; align-items: center; justify-content: center; width: 200px; padding: 10px; margin-right: 40px; margin-bottom: 40px; margin-top: 10px;">
+                                        <div style="text-align: center; margin: 0;">
+                                            <i class="fas fa-clipboard-check fa-2xl"style="margin-bottom: 35px; margin-top: 20px; color: #000000;"></i>
+                                            <h2 style="margin: 0; color: black;">BARGING</h2>
+                                        </div>
+                                    </a>
+
+                                    <a href="@ViewBag.pathParent/Dashboard/DashboardOperator" class="btn btn-light btn-lg btn-outline-primary shadow d-inline-flex align-items-center btn-custom" role="button" style="display: inline-flex; align-items: center; justify-content: center; width: 200px; padding: 10px; margin-right: 40px; margin-bottom: 40px; margin-top: 10px;">
+                                        <div style="text-align: center; margin: 0;">
+                                            <i class="fa-solid fa-gears fa-2xl" style=" margin-bottom: 35px; margin-top: 20px; color: #000000;"></i>
+                                            <h2 style="margin: 0; color: black;">OPERATOR</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>

@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Active Barging";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm">
+                        <li class="breadcrumb-item">
+                            <a href="@ViewBag.pathParent/Dashboard/Dashboard">
+                                <i class="fas fa-home"></i>
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="breadcrumb-item">
+                            <a href="@ViewBag.pathParent/Dashboard/DashboardOperator">
+                                Operation
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a>Active Barging</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <input type="text" id="web_link" value="@Session["Web_Link"]" hidden />
+
+                    <div class="card ">
+                        <div class="card-header">
+                            <div class="row">
+                                <label class="col-md-8">Active Barging</label>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card" id="activityBargingData"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript" src="~/Js/ActivityBarging.js"></script>

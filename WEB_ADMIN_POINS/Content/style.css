@@ -1,0 +1,40 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#orange-click:hover {
+    background: #1D7874;
+    transition: all ease-in .2s;
+}
+
+#orange-click-sub:hover {
+    background: #2B4141;
+    transition: all ease-in .2s;
+}
+
+#side-color {
+    background-color: #083D77;
+}
+
+#orange-click.nav-link.active {
+    background: #1D7874;
+    color: white;
+}
+
+#orange-click-sub.nav-link.active {
+    background: #2B4141;
+    color: white;
+}
+
+.centerPosition {
+    display: flex;
+    justify-content: center;
+}
+/*#card_header {
+    background: #25CED1;
+}
+
+#card_title {
+    color: black;
+}*/
+

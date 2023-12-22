@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm">
+                        <li class="breadcrumb-item">
+                            <a href="@ViewBag.pathParent/Dashboard/Dashboard">
+                                <i class="fas fa-home"></i>
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="breadcrumb-item">
+                            <a href="@ViewBag.pathParent/Dashboard/Index">
+                                Barging Online
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a>Dashboard Barging Online</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <input type="text" id="web_link" value="@Session["Web_Link"]" hidden />
+                    <input type="text" id="report_link" value="@Session["Report_URL"]" hidden />
+                    <!-- Default box -->
+                    <div class="card">
+                        <div>
+                            <iframe id="iframeReport" style="height:670px; width:95%; margin-left: 20px; margin-right: 20px" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- /.card -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        var frame = document.getElementById("iframeReport");
+        frame.src = $("#report_link").val() + "?rs:embed=true";
+    });
+
+</script>
+

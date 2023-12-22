@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "User Verification";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm">
+                        <li class="breadcrumb-item">
+                            <a href="@ViewBag.pathParent/Dashboard/Dashboard">
+                                <i class="fas fa-home"></i>
+                                Home
+                            </a>
+                        </li>
+
+                        
+                        <li class="breadcrumb-item">
+                            <a>User Verification</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <input type="text" id="web_link" value="@Session["Web_Link"]" hidden />
+                    <!-- Default box -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title"><b>Waiting List Data User</b></h3>
+                            <br />
+                        </div>
+                        <div id="grid"></div>
+                    </div>
+                    <!-- /.card -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript" src="~/Js/UserVerification.js"></script>
+

@@ -1,0 +1,159 @@
+﻿
+@{
+    ViewBag.Title = "Approval Barging Online Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1><b>Approval Barging Online</b></h1>
+                </div>
+
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-12">
+                    <!-- general form elements -->
+                    <div class="card">
+                        <div class="card-header" id="card_header">
+                            <h3 class="card-title" id="card_title"><b>Edit Barging Online</b></h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <div class="card-body">
+                            <div id="form">
+                                <form id="form_upload" style="margin-left: 50px" method="post">
+                                    <input type="text" id="web_link" value="@Session["Web_Link"]" hidden />
+                                    <div class="form-group row">
+                                        <label for="Type" class="col-sm-2 col-form-label">Nama</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="NAMA" name="NAMA" data-bind="value: NAMA" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="Type" class="col-sm-2 col-form-label">Jetty</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="k-combobox" id="JETTY" name="JETTY" data-bind="value: JETTY" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="Type" class="col-sm-2 col-form-label">Company</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="COMPANY" name="COMPANY" data-bind="value: COMPANY" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="Type" class="col-sm-2 col-form-label">Tug Boat</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="TUG_BOAT" name="TUG_BOAT" data-bind="value: TUG_BOAT" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="Type" class="col-sm-2 col-form-label">Barge</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="BARGE" name="BARGE" data-bind="value: BARGE" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="Type" class="col-sm-2 col-form-label">Capacity</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="k-combobox" id="CAPACITY" name="CAPACITY" data-bind="value: CAPACITY" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="Type" class="col-sm-2 col-form-label">Process Time</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="PROCESS_TIME" name="PROCESS_TIME" data-bind="value: PROCESS_TIME" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="Type" class="col-sm-2 col-form-label">Date Booking</label>
+                                        <div class="col-sm-10">
+                                            <input type="date" class="k-datepicker" id="DATE_BOOKING" name="DATE_BOOKING" data-bind="value: DATE_BOOKING" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="Type" class="col-sm-2 col-form-label">Start Time</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="START_TIME" name="START_TIME" data-bind="value: START_TIME" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="Type" class="col-sm-2 col-form-label">Finish Booking</label>
+                                        <div class="col-sm-10">
+                                            <input type="date" class="k-datepicker" id="FINISH_BOOKING" name="FINISH_BOOKING" data-bind="value: FINISH_BOOKING" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="Type" class="col-sm-2 col-form-label">Finish Time</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="FINISH_TIME" name="FINISH_TIME" data-bind="value: FINISH_TIME" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="Type" class="col-sm-2 col-form-label">Vessel/Tujuan</label>
+                                        <div class="col-sm-10" style="width:300px">
+                                            <textarea class="form-control" rows="4" cols="50" name="VESSEL" id="VESSEL" data-bind="value: VESSEL" >
+                     
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="Type" class="col-sm-2 col-form-label">Status</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="STATUS" name="STATUS" data-bind="value: STATUS" />
+                                        </div>
+                                    </div>
+
+
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            @*<div class="centerPosition">
+                                <button type="submit" id="btn_update" name="btn_update" class="btn btn-warning">Update</button>
+                            </div>
+                            <div class="centerPosition mt-2">
+                                <button type="submit" id="btn_kembali" name="btn_kembali" class="btn btn-primary">Kembali</button>
+                            </div>
+
+                            <div class="centerPosition">
+                                <button type="submit" id="btn_approve" name="btn_approve" class="btn btn-success">Approve</button>
+                            </div>
+                            <div class="centerPosition mt-2">
+                                <button type="submit" id="btn_reject" name="btn_reject" class="btn btn-danger">Reject</button>
+                            </div>*@
+                            <button type="submit" id="btn_kembali" name="btn_kembali" class="btn btn-primary">Kembali</button>
+                            <button type="submit" id="btn_update" name="btn_update" class="btn btn-warning ml-3">Update</button>
+                            <button type="submit" id="btn_reject" name="btn_reject" class="btn btn-danger ml-3">Reject</button>
+                            <button type="submit" id="btn_approve" name="btn_approve" class="btn btn-success ml-3">Approve</button>
+
+                        </div>
+                    </div>
+                    <!-- /.card -->
+                    <!-- general form elements -->
+                    <!-- /.card -->
+
+                </div>
+                <!--/.col (left) -->
+                <!-- right column -->
+                <!--/.col (right) -->
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+<script type="text/javascript" src="~/Js/ApprovalBargingOnline_Detail.js"></script>

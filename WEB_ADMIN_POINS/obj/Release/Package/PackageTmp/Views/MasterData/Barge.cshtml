@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "Master Barge";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm">
+                        <li class="breadcrumb-item">
+                            <a href="@ViewBag.pathParent/Dashboard/Dashboard">
+                                <i class="fas fa-home"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a>Master Data Barge</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <input type="text" id="web_link" value="@Session["Web_Link"]" hidden />
+                    <!-- Default box -->
+                    <div class="card">
+                        <div class="card-header navbar right" style="margin-right:auto !important">
+
+                            <h3 class="card-title" style="padding-right: 750px !important"><b>List Data Barging</b></h3>
+                            <button id="btnAddNew" class="btn btn-success" onclick="AddNew();"><i class="fa fa-plus"></i> Add New</button>
+                            <br />
+                        </div>
+                        <div id="grid"></div>
+                        <div id="pager" class="k-pager-wrap"></div>
+                    </div>
+                    <!-- /.card -->
+
+                </div>
+            </div>
+        </div>
+        <div id="modal-form" class="modal fade" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    @*<form class="form-horizontal" role="form">*@
+                    <div class="modal-header">
+                        <h4 class="modal-title"><label id="lblTitle"></label></h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <input type="hidden" id="hd_id" />
+                                <label for="txtName">Name</label>
+                                <input type="text" class="form-control" id="txtName" placeholder="Name" required>
+                            </div>
+                            <div class="modal-footer">
+                                @*<input type="button" onclick="Save();" value="Save" />*@
+                                <button class="btn btn-primary" onclick="Save();"><i class="fa fa-save"></i> Save</button>
+                                <button class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                            </div>
+                            @*<button type="submit" class="btn btn-primary">Sign in</button>*@
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+
+
+
+<script src="~/Js/MasterDataBarge.js"></script>
+
